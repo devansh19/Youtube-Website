@@ -36,7 +36,7 @@
     flex: 1;
     margin-left: 70px;
     margin-right: 35px;
-    max-width: 500px;
+    max-width: 473px;
    display: flex;
    align-items: center;
 }
@@ -45,10 +45,9 @@
     height: 36px;
     padding-left: 10px;
     font-size:16px;
-    border-width: 1px;
-   border-style: solid;
+  
+   border: 1px solid rgb(195, 195, 195);
     border-radius: 2px;
-    border-color: rgb(195, 195, 195);
     box-shadow: inset 1px 2px 3px
     rgba(0,0,0,0.05);
     width: 0;
@@ -60,16 +59,59 @@
 .search-button{
     height: 39px;
     width: 66px;
-    background-color: rgb(240,240,240);
+    background-color: rgb(244, 244, 244);
     border-width: 1px;
     border-style: solid;
     border-color:rgb(195, 195, 195);
     margin-left: -2px;
     margin-right: 10px;
+    cursor: pointer;
+    
+}
+.search-button, 
+.voice-search-button,
+ .upload-icon-container,
+ .youtube-apps-icon-container,
+ .notification-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+ .youtube-apps-icon-container .tooltip,
+ .notification-icon-container .tooltip
+{
+    font-family: Roboto,Arial;
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -45px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;;
+
+}
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+ .youtube-apps-icon-container:hover .tooltip,
+ .notification-icon-container:hover .tooltip{
+    opacity: 1;
 }
 .search-icon{
     height: 25px;
-    margin-top: 4px;
+  
     
 }
 .voice-search-button{
@@ -78,9 +120,10 @@
     border-radius: 20px;
     border: none;
     background-color: rgb(248, 248, 248);
+  
 }
 .voice-search-icon{
-    margin-top: 4px;
+  
     height: 24px;
 }
 .right-section{
@@ -93,16 +136,19 @@
 }
 .upload-icon{
     height: 24px;
+  
 }
 .youtube-apps-icon{
     height: 24px;
+    cursor: pointer;
 }
 .notifications-icon{
     height: 24px;
+    cursor: pointer;
 }
 .notification-icon-container{
     position: relative;
-   
+  
 
 }
 .notification-count{
@@ -124,4 +170,5 @@
     height: 32px;
     border-radius: 16px;
     margin-right: 20px;
+    cursor: pointer;
 }
